@@ -1,30 +1,30 @@
 # YouTube Original Language
 
-Eine kleine Chrome/Firefox-WebExtension, die auf `youtube.com` versucht, Video-Titel und Beschreibungen immer in der Originalsprache anzuzeigen.
+A small Chrome/Firefox WebExtension that tries to keep YouTube video titles and descriptions in their original language.
 
-## Was sie macht
+## What it does
 
-- läuft nur auf `www.youtube.com` und `m.youtube.com`
-- markiert die Seite mit `translate="no"` und `notranslate`
-- liest Originaltitel und Originalbeschreibung aus YouTubes eingebetteten Videodaten
-- ersetzt sichtbare übersetzte Titel/Beschreibungen auf Watch-Seiten durch diese Originaldaten
-- klickt sichtbare YouTube-Schaltflächen wie `Show original` / `Original anzeigen`, falls YouTube sie anbietet
+- runs only on `www.youtube.com` and `m.youtube.com`
+- marks the page with `translate="no"` and `notranslate`
+- reads the original title and description from YouTube's embedded video data
+- replaces visible translated titles/descriptions on watch pages with those original values
+- clicks visible YouTube controls such as `Show original` / `Original anzeigen` when YouTube exposes them
 
-## Einschränkung
+## Limitation
 
-YouTube stellt keine offizielle Browser-API für „niemals übersetzen“ bereit. Diese Erweiterung arbeitet deshalb bestmöglich mit den Daten und Bedienelementen, die YouTube auf der Seite ausliefert. Wenn YouTube die Originaldaten gar nicht an den Browser sendet oder das DOM ändert, kann ein Update nötig werden.
+YouTube does not provide an official browser API for "never translate this content." This extension therefore works best-effort with the data and controls YouTube exposes on the page. If YouTube does not send the original data to the browser, or changes its page structure, the extension may need an update.
 
-## Installation in Chrome
+## Chrome installation
 
-1. `chrome://extensions` öffnen.
-2. `Entwicklermodus` aktivieren.
-3. `Entpackte Erweiterung laden` klicken.
-4. Diesen Ordner auswählen: `youtube-original-language-extension`.
+1. Open `chrome://extensions`.
+2. Enable `Developer mode`.
+3. Click `Load unpacked`.
+4. Select this folder: `youtube-original-language-extension`.
 
-## Installation in Firefox
+## Firefox installation
 
-1. `about:debugging#/runtime/this-firefox` öffnen.
-2. `Temporäres Add-on laden...` klicken.
-3. Die Datei `manifest.json` in diesem Ordner auswählen.
+1. Open `about:debugging#/runtime/this-firefox`.
+2. Click `Load Temporary Add-on...`.
+3. Select the `manifest.json` file in this folder.
 
-Firefox lädt temporäre Add-ons nach einem Browser-Neustart nicht automatisch neu.
+Firefox does not automatically reload temporary add-ons after a browser restart.
