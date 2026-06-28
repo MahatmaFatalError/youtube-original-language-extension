@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Original Language",
+  "version": "1.0.0",
+  "description": "Keeps YouTube video titles and descriptions in the original language whenever YouTube exposes the original metadata.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*"
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "youtube-original-language@local"
+    }
+  }
+}
